@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "REACT_APP_API_SERVER_ENDPOINT=http://127.0.0.1:3000 PORT=8080 react-scripts start",
-    "build": "REACT_APP_API_SERVER_ENDPOINT=https://api.chanhoe.click react-scripts build",
+    "build": "REACT_APP_API_SERVER_ENDPOINT=https://api.devops-alt4.click react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
