@@ -15,7 +15,7 @@
 
 
 ## 개발환경(development environment)
-REACT
+REACT, Javascript
 API: 
 - dev.devops-altf4.click > API server
-  dev.devops-altf4.click/auth > Auth server 
+- dev.devops-altf4.click/auth > Auth server 
