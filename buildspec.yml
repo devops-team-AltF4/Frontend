@@ -2,7 +2,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - cd src
       - npm install
   build:
     commands:
@@ -10,4 +9,4 @@ phases:
 artifacts:
   files:
      - '**/*'
-  base-directory: src/build
+  base-directory: build

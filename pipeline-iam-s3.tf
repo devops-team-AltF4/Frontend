@@ -40,3 +40,19 @@ resource "aws_iam_role_policy_attachment" "codedeploy_policy" {
   role       = aws_iam_role.codedeploy_role.id
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"
 }
+
+resource "aws_iam_role" "codebuild_role" {
+  name = "CodeBuild-Role"
+
+  assume_role_policy = "${file("iam/codebuild-assume.json")}"
+}
+
+resource "aws_iam_role_policy" "codebuild_policy" {
+  name = "Codebuild-Policy"
+  role = aws_iam_role.codebuild_role.id
+  policy = "${file("iam/codebuild-policy.json")}"
+}
+
+data "aws_kms_alias" "s3" {
+  name = "alias/aws/s3"
+}

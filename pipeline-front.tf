@@ -11,10 +11,10 @@ resource "aws_codepipeline" "codepipeline" {
     location = aws_s3_bucket.codepipeline_bucket.bucket
     type     = "S3"
 
-    # encryption_key {
-    #   id   = data.aws_kms_alias.s3kmskey.arn
-    #   type = "KMS"
-    # }
+    encryption_key {
+      id   = data.aws_kms_alias.s3.arn
+      type = "KMS"
+    }
   }
 
   stage {
@@ -54,7 +54,7 @@ resource "aws_codepipeline" "codepipeline" {
       version          = "1"
 
       configuration = {
-        ProjectName = "front-build"
+        ProjectName = aws_codebuild_project.front.name
       }
     }
   }
