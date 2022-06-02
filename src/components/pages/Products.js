@@ -7,7 +7,7 @@ import axios from 'axios'
 axios.defaults.withCredentials = true;
 
 export default function Products() {
-  const [state, setState] = useState(0)
+  const [state, setState] = useState()
   useEffect(() => {
     axios.get('/auth')
   .then(function (response) {
