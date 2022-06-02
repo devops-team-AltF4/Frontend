@@ -9,15 +9,15 @@ resource "aws_codebuild_project" "front" {
   service_role       = aws_iam_role.codebuild_role.arn
 
   artifacts {
-    name = "tf-front-build"
-    packaging = "NONE"
-    type = "CODEPIPELINE"
-    encryption_disabled = false
+    name                   = "tf-front-build"
+    packaging              = "NONE"
+    type                   = "CODEPIPELINE"
+    encryption_disabled    = false
     override_artifact_name = false
   }
 
   cache {
-    type  = "NO_CACHE"
+    type = "NO_CACHE"
   }
 
   environment {
@@ -36,11 +36,11 @@ resource "aws_codebuild_project" "front" {
 
   logs_config {
     cloudwatch_logs {
-      status      = "ENABLED"
+      status = "ENABLED"
     }
 
     s3_logs {
-      status   = "DISABLED"
+      status              = "DISABLED"
       encryption_disabled = false
     }
   }

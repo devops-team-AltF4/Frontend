@@ -31,9 +31,9 @@ resource "aws_codepipeline" "codepipeline" {
       output_artifacts = ["SourceArtifact"]
 
       configuration = {
-        ConnectionArn    = aws_codestarconnections_connection.github.arn
-        FullRepositoryId = "devops-team-AltF4/Frontend"
-        BranchName       = "main"
+        ConnectionArn        = aws_codestarconnections_connection.github.arn
+        FullRepositoryId     = "devops-team-AltF4/Frontend"
+        BranchName           = "main"
         OutputArtifactFormat = "CODE_ZIP"
       }
     }
@@ -43,7 +43,7 @@ resource "aws_codepipeline" "codepipeline" {
     name = "Build"
 
     action {
-      run_order = 1
+      run_order        = 1
       name             = "Build"
       category         = "Build"
       owner            = "AWS"
@@ -74,7 +74,7 @@ resource "aws_codepipeline" "codepipeline" {
 
       configuration = {
         BucketName = "project4-frontend-react"
-        Extract = "true"
+        Extract    = "true"
       }
     }
   }
