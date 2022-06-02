@@ -5,13 +5,13 @@ terraform {
       version = "~> 3.0"
     }
   }
-  # cloud {
-  #   organization = "pj4terraform"
+  cloud {
+    organization = "pj4terraform"
 
-  #   workspaces {
-  #     name = "frontend"
-  #   }
-  # }
+    workspaces {
+      name = "frontend"
+    }
+  }
 }
 
 # Configure the AWS Provider
