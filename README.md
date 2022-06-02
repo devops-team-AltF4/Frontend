@@ -1,7 +1,7 @@
 # Frontend
 
 ## 프로젝트 목표
-실제 회사처럼 프론트, api서버, auth서버 3가지팀이 개별적으로 존재한다고 (local/dev/staging/production) 각 개별 환경별 배포 자동화를 마치고 staging/production 환경에서는 쿠버네티스를 이용한 오케스트레이션을 완성시키는게 목표
+실제 회사처럼 프론트, api서버, auth서버 3가지팀이 개별적으로 존재한다고 (local/dev/staging/production) 각 개별 환경별 배포 자동화를 마치고 dev환경에서는 각 개발자들의 코드를 모아 테스트 할 수 있는 환경을 제공하고, staging/production 환경에서는 쿠버네티스를 이용한 오케스트레이션을 완성시키는게 목표
 
 ## 시스템 아키텍쳐
 (사진필요)
