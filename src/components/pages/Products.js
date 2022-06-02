@@ -9,7 +9,7 @@ axios.defaults.withCredentials = true;
 export default function Products() {
   const [state, setState] = useState()
   useEffect(() => {
-    axios.get('/auth')
+    axios.get('http://eks.devops-altf4.click/auth')
   .then(function (response) {
     console.log(response.data, state);
     setState(response.data)
