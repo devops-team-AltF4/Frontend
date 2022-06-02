@@ -8,9 +8,9 @@ resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
   acl    = "private"
 }
 
-# data "aws_kms_alias" "s3kmskey" {
-#   name = "alias/myKmsKey"
-# }
+data "aws_kms_alias" "s3" {
+  name = "alias/aws/s3"
+}
 
 resource "aws_iam_role" "codepipeline_role" {
   name = "Pipeline-Role"
@@ -51,8 +51,4 @@ resource "aws_iam_role_policy" "codebuild_policy" {
   name = "Codebuild-Policy"
   role = aws_iam_role.codebuild_role.id
   policy = "${file("iam/codebuild-policy.json")}"
-}
-
-data "aws_kms_alias" "s3" {
-  name = "alias/aws/s3"
 }

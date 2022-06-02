@@ -19,6 +19,7 @@ function HeroSection() {
         >
           DB로 부터 온 메세지 확인하기 <i className='far fa-play-circle' />
         </Button>
+        
       </div>
     </div>
   );
