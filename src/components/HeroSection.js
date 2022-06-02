@@ -7,7 +7,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>DevOps 01 Project</h1>
+      <h1>DevOps 01 Project4</h1>
       <p>김휘천, 주형우, 최재혁, 최찬회</p>
       <div className='hero-btns'>
 
