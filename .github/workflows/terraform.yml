@@ -34,9 +34,9 @@ jobs:
         id: init
         run: terraform init
       
-      - name: Terraform Validate
-        id: validate
-        run: terraform validate -no-color
+#       - name: Terraform Validate
+#         id: validate
+#         run: terraform validate -no-color
 
       - name: Terraform Plan
         id: plan
@@ -46,5 +46,5 @@ jobs:
 
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
