@@ -4,7 +4,10 @@
 실제 회사처럼 프론트, api서버, auth서버 3가지팀이 개별적으로 존재한다고 (local/dev/staging/production) 각 개별 환경별 배포 자동화를 마치고 dev환경에서는 각 개발자들의 코드를 모아 테스트 할 수 있는 환경을 제공하고, Frontend에서는 빠른 정적 웹호스팅이 요구되어 캐시처리를 해줄 Cloudfront, AWS 내 제공해주는 CI/CD 툴인 Codedeploy, S3를 활용하여 하나의 git repository 내 코드 통합 시 소스코드의 단일공급원으로의 역할을 하게 만드는 것이 목표입니다. 
 
 ## 시스템 아키텍쳐
-(사진필요)
+**Staging / Production**
+![SA](https://user-images.githubusercontent.com/98368480/171761985-76d87513-ef94-4f5b-8993-5ebc07fe87d6.png)
+**Development**
+![Dev](https://user-images.githubusercontent.com/98368480/171762036-b3374dee-3602-4e15-b428-689356017831.png)
 
 ## 배포 파이프라인
 ![프론트엔드 배포자동화](https://user-images.githubusercontent.com/98368480/171646167-3b9fa219-25ad-41f1-b1dc-f0265cb8ff39.png)
@@ -20,10 +23,11 @@
 ## terraform iac(front)
 codepipeline, iam, s3
 
-## 명령어
+## API Reference
 - dev환경 : https://dev.devops-altf4.click/
-- staging/productiong환경 : https://staging.devops-altf4.click/
-
+- staging : https://staging.devops-altf4.click/
+- Production : https://devops-altf4.click/
+https://app.swaggerhub.com/apis/DevOps-Altf4/Project4-altf4/1.0.0
 ## out put
 (홈페이지)
 
