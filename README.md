@@ -24,12 +24,20 @@
 codepipeline, iam, s3
 
 ## API Reference
-- dev환경 : https://dev.devops-altf4.click/
+- dev : https://dev.devops-altf4.click/
 - staging : https://staging.devops-altf4.click/
-- Production : https://devops-altf4.click/
-https://app.swaggerhub.com/apis/DevOps-Altf4/Project4-altf4/1.0.0
+- Production : https://www.devops-altf4.click/
+- swagger : https://app.swaggerhub.com/apis/DevOps-Altf4/Project4-altf4/1.0.0
+
 ## out put
-(홈페이지)
+dev
+<img width="1440" alt="스크린샷 2022-06-03 오전 10 19 35" src="https://user-images.githubusercontent.com/50437623/171768660-19b0283a-1ad4-4cbd-8d39-6407c0cb86b4.png">
+
+
+staging/production
+<img width="1440" alt="스크린샷 2022-06-03 오전 10 17 21" src="https://user-images.githubusercontent.com/50437623/171768498-d0543fd1-c9be-4a49-b209-e832e20b99c1.png">
+
+
 
 
 ## 기술 스택
