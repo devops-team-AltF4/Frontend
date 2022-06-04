@@ -42,7 +42,57 @@ staging/production
 <img width="1440" alt="스크린샷 2022-06-03 오전 10 17 21" src="https://user-images.githubusercontent.com/50437623/171768498-d0543fd1-c9be-4a49-b209-e832e20b99c1.png">
 
 
-
+## Start
+```
+npm run start
+```
 
 ## 기술 스택
 AWS Code pipeline, github-cli, git actions, Network, Terraform
+
+## code
+```
+# Frontend/src/components/pages/Products.js 
+import axios from 'axios'
+axios.defaults.withCredentials = true;
+
+export default function Products() {
+  const [state, setState] = useState()
+  useEffect(() => {
+    axios.get('https://eks.devops-altf4.click/auth')
+  .then(function (response) {
+    console.log(response.data, state);
+    setState(response.data)
+  })
+      
+    return () => {
+      
+    };
+  }, []);
+```
+axios를 이용해 auth 서버의 url 값을 들고 온다음 h1에 state 값을 보여주는 코드입니다.
+
+```
+#Frontend/src/components/pages/SignUp.js 
+
+import React from 'react';
+import '../../App.css';
+import { useState, useEffect } from 'react'
+
+export default function SignUp() {
+  const [msg, setMsg] = useState('서버 연결 중')
+
+  useEffect(() => {
+    fetch(process.env.REACT_APP_API_SERVER_ENDPOINT)
+    .then(resp => resp.json())
+    .then(json => setMsg(json))
+    .catch(() => setMsg('연결 안됨'))
+  }, [])
+
+  return <h1 className='sign-up'>{JSON.stringify(msg)}</h1>;
+}
+```
+RDS와 api서버가 연결되있는 url을 useState, useEffect를 통해 나타냅니다.
+
+
+
