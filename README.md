@@ -5,9 +5,11 @@
 
 ## 시스템 아키텍쳐
 **Staging / Production**
-![SA](https://user-images.githubusercontent.com/98368480/171761985-76d87513-ef94-4f5b-8993-5ebc07fe87d6.png)
+![스크린샷, 2022-06-04 16-34-37](https://user-images.githubusercontent.com/50416571/171989706-18cd86c7-8487-4aec-bad3-f8a38c249385.png)
+
 **Development**
-![Dev](https://user-images.githubusercontent.com/98368480/171762036-b3374dee-3602-4e15-b428-689356017831.png)
+![스크린샷, 2022-06-04 16-34-40](https://user-images.githubusercontent.com/50416571/171989708-72633f32-c834-414b-aa17-534a175e5802.png)
+
 
 ## 배포 파이프라인
 ![프론트엔드 배포자동화](https://user-images.githubusercontent.com/98368480/171646167-3b9fa219-25ad-41f1-b1dc-f0265cb8ff39.png)
